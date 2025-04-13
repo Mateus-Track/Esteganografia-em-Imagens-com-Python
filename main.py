@@ -3,7 +3,7 @@ import sys
 import os
 
 def escrever_senha(senha, imagem1, tamanho):
-    print("Escrevendo senha")
+    print("\nEscrevendo senha")
 
     index_senha = 0
     index_bit = 7 #percorrer todos os bits (7 - 0) do char.
@@ -80,14 +80,16 @@ def escrever_senha(senha, imagem1, tamanho):
 
     # print("Ultimas coordenadas: X = " + str(coord_x) + "Y = "+ str(coord_y))
 
-    imagem1.save("imagem_saida/saida.png")
+    imagem1.save("imagens/imagem_saida/saida.png")
             
     print("Sua imagem com a senha está dentro de 'imagem/saida'!")
+    print("\n")
 
     pergunta = input("Deseja já salvar essa imagem com a senha na pasta da senha? (1)  ")
+
     if(int(pergunta) == 1):
-        imagem1.save("imagem_com_mensagem/mensagem_escondida.png")
-        print("E sua imagem também está salva já dentro da pasta imagem_com_mensagem, e assim, pronta para ser revelada!")
+        imagem1.save("imagens/imagem_com_mensagem/mensagem_escondida.png")
+        print("\nE sua imagem também está salva já dentro da pasta imagem_com_mensagem, e assim, pronta para ser revelada!\n")
         
 
 def extraindo_mensagem(imagem1, imagem2):
@@ -124,6 +126,7 @@ def extraindo_mensagem(imagem1, imagem2):
     print("Senha Escondida: ")
     senha_string = desord(senha_criptografada)
     print(senha_string)
+    
 
 def desord(senha_inteiros):
     return ''.join(chr(n) for n in senha_inteiros)
@@ -132,7 +135,7 @@ if __name__ == "__main__":
 
     decisao = input("Deseja esconder a mensagem em uma imagem (1) | ou revelar a senha de uma já existente (2) ?  \n")
 
-    pasta_entrada = "imagem_entrada"
+    pasta_entrada = "imagens/imagem_entrada"
     arquivos = os.listdir(pasta_entrada)
     if arquivos:
         arquivo = os.path.join(pasta_entrada, arquivos[0])
@@ -146,23 +149,18 @@ if __name__ == "__main__":
 
         tamanho = len(senha)
 
-        imagem1 = Image.open(arquivo)
-        
-        imagem_original = imagem1
+        imagem1 = Image.open(arquivo)        
+        # imagem1 = imagem1.convert("RGB")
 
-
-        imagem1 = imagem1.convert("RGB")
-
-        # escrever_senha(senha, imagem1, tamanho)
         escrever_senha(senha, imagem1, tamanho)
 
         
     elif int(decisao) == 2:
         
         imagem_original = Image.open(arquivo)
-        imagem_original = imagem_original.convert("RGB")
+        # imagem_original = imagem_original.convert("RGB")
 
-        pasta_senha = "imagem_com_mensagem"
+        pasta_senha = "imagens/imagem_com_mensagem"
         arquivos = os.listdir(pasta_senha)
         if arquivos:
             arquivo = os.path.join(pasta_senha, arquivos[0])
@@ -171,9 +169,8 @@ if __name__ == "__main__":
             sys.exit()
         
         imagem_criptografada = Image.open(arquivo)
-        imagem_criptografada = imagem_criptografada.convert("RGB")
+        # imagem_criptografada = imagem_criptografada.convert("RGB")
 
-        # extraindo_mensagem(imagem_original, imagem_criptografada)
         extraindo_mensagem(imagem_original, imagem_criptografada)
     else:
         print("Decisao invalida!")
