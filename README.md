@@ -33,10 +33,10 @@ Você pode instalar o Pillow facilmente com:
 
 ```bash
 pip install Pillow
+```
 
----
 
-## 📁 Estrutura de Pastas
+### 📁 Estrutura de Pastas
 
 ```bash
 📂 imagem_entrada         # Pasta onde é inserido o PNG original
