@@ -7,7 +7,7 @@ Dessa forma, caso sua mensagem caiba na imagem inserida, esse texto será escrit
 Após inserir a mensagem, o programa salva a nova imagem obrigatoriamente na pasta de saída, e se você preferir, já também salva na pasta "imagem_com_mensagem":
 
 - `imagem_saida/` → imagem com a mensagem escondida
-- `imagem_com_mensagem/` → imagem pronta para a próxima etapa (revelar)
+- `imagem_com_mensagem/` → imagem que terá sua mensagem revelada
 
 ---
 Assim, com a sua imagem original dentro da pasta de entrada, e com a sua imagem com a mensagem escrita dentro da pasta "imagem_com_mensagem", é possível executar o código buscando revelar sua mensagem, dessa forma será printado no terminal o seu texto secreto! Vale ressaltar que é importante que só haja uma única imagem dentro de cada uma das pastas.
