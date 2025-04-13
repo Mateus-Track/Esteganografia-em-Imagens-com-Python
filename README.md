@@ -1,16 +1,29 @@
-# Projeto de Esteganografia - Esconder mensagens dentro de imagens
+# Esteganografia em Imagens PNG com Python
 
 Com esse projeto, é possível inserir uma imagem do tipo PNG na pasta "imagem_entrada", e assim executar a "main.py" buscando esconder uma mensagem dentro dessa imagem.
 
-Dessa forma, caso essa mensagem caiba na imagem inserida, esse texto será escrito dentro da imagem de maneira sutil dentro de seus pixels, e depois salva dentro da pasta "imagem_saida". 
+# Como Funciona
+Dessa forma, caso sua mensagem caiba na imagem inserida, esse texto será escrito dentro da imagem de maneira sutil dentro de seus pixels, onde o bit menos significativo de um dos valores do RGB é alterado (para 0 ou 1, dependendo qual o bit do caracter que precisa ser escrito). 
+Após inserir a mensagem, o programa salva a nova imagem obrigatoriamente na pasta de saída, e se você preferir, já também salva na pasta "imagem_com_mensagem":
 
-No final da execução, é possível também já salvar essa imagem na pasta "imagem_com_mensagem", facilitando o próximo passo.
+- `imagem_saida/` → imagem com a mensagem escondida
+- `imagem_com_mensagem/` → imagem pronta para a próxima etapa (revelar)
 
-Assim, com a sua imagem original dentro da pasta de entrada, e com a sua imagem de saída dentro da pasta "imagem_com_mensagem", executando o código buscando revelar a mensagem vai assim printar no terminal o seu texto secreto!
+---
+Assim, com a sua imagem original dentro da pasta de entrada, e com a sua imagem com a mensagem escrita dentro da pasta "imagem_com_mensagem", é possível executar o código buscando revelar sua mensagem, dessa forma será printado no terminal o seu texto secreto! Vale ressaltar que é importante que só haja uma única imagem dentro de cada uma das pastas.
 
-Para realizar esse procedimento, o código utiliza de uma técnica de Esteganografia para alterar o bit menos significativo de um dos valores do RGB de um pixel, onde para cada caracter ele precisa de 8 pixels para escondê-lo.
+# Vantagens
 Nesse sentido, como apenas o bit menos significativo está sendo alterado (para 0 ou 1, dependendo para qual bit do caracter ele precisa ser transformado), a diferença de cor do pixel alterado é muito sutil, o que torna muito difícil saber que aquela mensagem foi alterada.
 
 Além disso, como a imagem se mantém quase idêntica à original, saber qual a mensagem escondida sem ter a imagem original se torna quase impossível.
 
+# Texto padrão do repositório
 Por padrão, está uma imagem de uma paisagem em Itajaí, que no arquivo imagem_saida e no arquivo imagem_com_mensagem contém essa foto com todo o texto do roteiro do filme Shrek 2 escondido. Para revelar, basta rodar o código e escolher a opção para ele revelar a mensagem, porém, é possível escrever uma nova mensagem na imagem, ou também fazer isso com qualquer outra imagem PNG inserida.
+
+## 📁 Estrutura de Pastas
+
+```bash
+📂 imagem_entrada         # Coloque aqui sua imagem PNG original
+📂 imagem_saida           # Imagem com a mensagem escondida
+📂 imagem_com_mensagem    # Imagem pronta para revelar o conteúdo oculto
+📄 main.py                # Script principal
