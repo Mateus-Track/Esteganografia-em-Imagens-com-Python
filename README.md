@@ -20,6 +20,22 @@ Além disso, como a imagem se mantém quase idêntica à original, saber qual a 
 # Texto padrão do repositório
 Por padrão, está uma imagem de uma paisagem em Itajaí, que no arquivo imagem_saida e no arquivo imagem_com_mensagem contém essa foto com todo o texto do roteiro do filme Shrek 2 escondido. Para revelar, basta rodar o código e escolher a opção para ele revelar a mensagem, porém, é possível escrever uma nova mensagem na imagem, ou também fazer isso com qualquer outra imagem PNG inserida.
 
+## ⚙️ Requisitos
+
+Para executar este projeto, você precisa apenas de:
+
+- Python
+- Biblioteca [Pillow](https://python-pillow.org/) para manipular imagens PNG
+
+### Instalação da biblioteca Pillow:
+
+Você pode instalar o Pillow facilmente com:
+
+```bash
+pip install Pillow
+
+---
+
 ## 📁 Estrutura de Pastas
 
 ```bash
