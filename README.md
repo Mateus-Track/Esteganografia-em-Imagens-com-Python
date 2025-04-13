@@ -10,15 +10,17 @@ Após inserir a mensagem, o programa salva a nova imagem obrigatoriamente na pas
 - `imagem_com_mensagem/` → imagem que terá sua mensagem revelada
 
 ---
-Assim, com a sua imagem original dentro da pasta de entrada, e com a sua imagem com a mensagem escrita dentro da pasta "imagem_com_mensagem", é possível executar o código buscando revelar sua mensagem, dessa forma será printado no terminal o seu texto secreto! Vale ressaltar que é importante que só haja uma única imagem dentro de cada uma das pastas.
+Assim, com a sua imagem original dentro da pasta de entrada, e com a sua imagem com a mensagem escrita dentro da pasta "imagem_com_mensagem", é possível executar o código buscando revelar sua mensagem, o que printará no terminal o seu texto secreto! Vale ressaltar que é essencial que só haja uma única imagem dentro de cada uma das pastas individuais.
 
 ## Vantagens
-Nesse sentido, como apenas o bit menos significativo está sendo alterado (para 0 ou 1, dependendo para qual bit do caracter ele precisa ser transformado), a diferença de cor do pixel alterado é muito sutil, o que torna muito difícil saber que aquela mensagem foi alterada.
+Nesse sentido, como apenas o bit menos significativo está sendo alterado, a diferença de cor do pixel alterado é muito sutil, o que torna muito difícil saber que aquela imagem foi alterada.
 
-Além disso, como a imagem se mantém quase idêntica à original, saber qual a mensagem escondida sem ter a imagem original se torna quase impossível.
+Além disso, como a imagem se mantém quase idêntica à original, saber qual é a mensagem escondida sem ter a imagem original se torna quase impossível.
 
 ## Texto padrão do repositório
-Por padrão, está uma imagem de uma paisagem em Itajaí, que no arquivo imagem_saida e no arquivo imagem_com_mensagem contém essa foto com todo o texto do roteiro do filme Shrek 2 escondido. Para revelar, basta rodar o código e escolher a opção para ele revelar a mensagem, porém, é possível escrever uma nova mensagem na imagem, ou também fazer isso com qualquer outra imagem PNG inserida.
+Por padrão, está uma imagem de uma paisagem em Itajaí, que no arquivo "imagem_saida" e no arquivo "imagem_com_mensagem" contém essa foto com todo o texto do roteiro do filme Shrek 2 escondido, que foi retirado da Internet. Para revelar, basta rodar o código e escolher a opção para ele revelar a mensagem.
+
+No entanto, é possível escrever uma nova mensagem na imagem já existente e depois lê-la, ou também fazer isso com qualquer outra imagem PNG inserida no arquivo de entrada. Lmebrando de respeitar a regra de apenas uma imagem dentro de um arquivo específico.
 
 ## ⚙️ Requisitos
 
