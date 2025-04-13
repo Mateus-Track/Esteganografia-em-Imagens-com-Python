@@ -23,7 +23,7 @@ Por padrão, está uma imagem de uma paisagem em Itajaí, que no arquivo imagem_
 ## 📁 Estrutura de Pastas
 
 ```bash
-📂 imagem_entrada         # Coloque aqui sua imagem PNG original
-📂 imagem_saida           # Imagem com a mensagem escondida
-📂 imagem_com_mensagem    # Imagem pronta para revelar o conteúdo oculto
+📂 imagem_entrada         # Pasta onde é inserido o PNG original
+📂 imagem_saida           # Pasta que vai possuir o PNG de saída, com a mensagem escondida
+📂 imagem_com_mensagem    # Pasta que possui a imagem pronta para revelar o conteúdo oculto, comparando com a imagem de entrada
 📄 main.py                # Script principal
