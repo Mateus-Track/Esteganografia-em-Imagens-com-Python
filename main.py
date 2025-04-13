@@ -81,10 +81,13 @@ def escrever_senha(senha, imagem1, tamanho):
     # print("Ultimas coordenadas: X = " + str(coord_x) + "Y = "+ str(coord_y))
 
     imagem1.save("imagem_saida/saida.png")
+            
+    print("Sua imagem com a senha está dentro de 'imagem/saida'!")
 
-    pergunta = input("Deseja já salvar essa imagem com a senha na pasta da senha? (1)")
+    pergunta = input("Deseja já salvar essa imagem com a senha na pasta da senha? (1)  ")
     if(int(pergunta) == 1):
-        imagem1.save("imagem_criptografada/mensagem_escondida.png")
+        imagem1.save("imagem_com_mensagem/mensagem_escondida.png")
+        print("E sua imagem também está salva já dentro da pasta imagem_com_mensagem, e assim, pronta para ser revelada!")
         
 
 def extraindo_mensagem(imagem1, imagem2):
@@ -152,15 +155,14 @@ if __name__ == "__main__":
 
         # escrever_senha(senha, imagem1, tamanho)
         escrever_senha(senha, imagem1, tamanho)
-        
-        print("Sua imagem com a senha está dentro de 'imagem/saida'!")
+
         
     elif int(decisao) == 2:
         
         imagem_original = Image.open(arquivo)
         imagem_original = imagem_original.convert("RGB")
 
-        pasta_senha = "imagem_criptografada"
+        pasta_senha = "imagem_com_mensagem"
         arquivos = os.listdir(pasta_senha)
         if arquivos:
             arquivo = os.path.join(pasta_senha, arquivos[0])
