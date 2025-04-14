@@ -20,7 +20,7 @@ Além disso, como a imagem se mantém quase idêntica à original, saber qual é
 ## Texto padrão do repositório
 Por padrão, está uma imagem de uma paisagem em Itajaí, que no arquivo "imagem_saida" e no arquivo "imagem_com_mensagem" contém essa foto com todo o texto do roteiro do filme Shrek 2 escondido, que foi retirado da Internet. Para revelar, basta rodar o código e escolher a opção para ele revelar a mensagem.
 
-No entanto, é possível escrever uma nova mensagem na imagem já existente e depois lê-la, ou também fazer isso com qualquer outra imagem PNG inserida no arquivo de entrada. Lmebrando de respeitar a regra de apenas uma imagem dentro de um arquivo específico.
+No entanto, é possível escrever uma nova mensagem na imagem já existente e depois lê-la, ou também fazer isso com qualquer outra imagem PNG inserida no arquivo de entrada. Lembrando de respeitar a regra de apenas uma imagem dentro de um arquivo específico.
 
 ## ⚙️ Requisitos
 
