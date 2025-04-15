@@ -148,9 +148,24 @@ if __name__ == "__main__":
         senha = input('Digite a mensagem que vai ser escondida na imagem: ')
 
         tamanho = len(senha)
+        nome = os.path.basename(arquivo)
+        extensao = os.path.splitext(nome)[1].lower()  
+        imagem1 = Image.open(arquivo)  
 
-        imagem1 = Image.open(arquivo)        
-        # imagem1 = imagem1.convert("RGB")
+        if extensao in ['.jpg', '.jpeg']:
+
+            novo_nome = os.path.splitext(arquivo)[0] + ".png"
+            imagem1.save(novo_nome)
+            imagem1.close()
+
+            imagem_antiga = "imagens/imagem_entrada/" + nome
+            os.remove(imagem_antiga)
+
+            arquivos = os.listdir(pasta_entrada)
+            arquivo = os.path.join(pasta_entrada, arquivos[0])
+
+            imagem1 = Image.open(arquivo)
+        
 
         escrever_senha(senha, imagem1, tamanho)
 
@@ -158,7 +173,6 @@ if __name__ == "__main__":
     elif int(decisao) == 2:
         
         imagem_original = Image.open(arquivo)
-        # imagem_original = imagem_original.convert("RGB")
 
         pasta_senha = "imagens/imagem_com_mensagem"
         arquivos = os.listdir(pasta_senha)
@@ -169,7 +183,6 @@ if __name__ == "__main__":
             sys.exit()
         
         imagem_criptografada = Image.open(arquivo)
-        # imagem_criptografada = imagem_criptografada.convert("RGB")
 
         extraindo_mensagem(imagem_original, imagem_criptografada)
     else:
