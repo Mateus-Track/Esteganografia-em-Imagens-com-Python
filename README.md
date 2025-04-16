@@ -1,6 +1,6 @@
-# Esteganografia em Imagens PNG com Python
+# Esteganografia em Imagens com Python
 
-Com esse projeto, é possível inserir uma imagem do tipo PNG na pasta "imagem_entrada", e assim executar a "main.py" buscando esconder uma mensagem dentro dessa imagem.
+Com esse projeto, é possível inserir uma imagem na pasta "imagem_entrada", e assim executar a "main.py" buscando esconder uma mensagem dentro dessa imagem.
 
 ## Como Funciona
 Dessa forma, caso sua mensagem caiba na imagem inserida, esse texto será escrito dentro da imagem de maneira sutil dentro de seus pixels, onde o bit menos significativo de um dos valores do RGB é alterado (para 0 ou 1, dependendo qual o bit do caracter que precisa ser escrito). 
@@ -10,7 +10,10 @@ Após inserir a mensagem, o programa salva a nova imagem obrigatoriamente na pas
 - `imagem_com_mensagem/` → imagem que terá sua mensagem revelada
 
 ---
+Caso sua imagem não seja no formato ".png", ele realizará a conversão para esse formato.
+
 Assim, com a sua imagem original dentro da pasta de entrada, e com a sua imagem com a mensagem escrita dentro da pasta "imagem_com_mensagem", é possível executar o código buscando revelar sua mensagem, o que printará no terminal o seu texto secreto! Vale ressaltar que é essencial que só haja uma única imagem dentro de cada uma das pastas individuais.
+
 
 ## Vantagens
 Nesse sentido, como apenas o bit menos significativo está sendo alterado, a diferença de cor do pixel alterado é muito sutil, o que torna muito difícil saber que aquela imagem foi alterada.
@@ -27,7 +30,7 @@ No entanto, é possível escrever uma nova mensagem na imagem já existente e de
 Para executar este projeto, você precisa apenas de:
 
 - Python
-- Biblioteca [Pillow](https://python-pillow.org/) para manipular imagens PNG
+- Biblioteca [Pillow](https://python-pillow.org/) para manipular imagens
 
 ### Instalação da biblioteca Pillow:
 
