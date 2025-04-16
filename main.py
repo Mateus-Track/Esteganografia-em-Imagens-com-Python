@@ -78,6 +78,7 @@ def escrever_senha(senha, imagem1, tamanho):
         index_bit = 7
         index_senha += 1
 
+    
     # print("Ultimas coordenadas: X = " + str(coord_x) + "Y = "+ str(coord_y))
 
     imagem1.save("imagens/imagem_saida/saida.png")
@@ -166,7 +167,7 @@ if __name__ == "__main__":
 
             imagem1 = Image.open(arquivo)
         
-
+        imagem1 = imagem1.convert("RGB")
         escrever_senha(senha, imagem1, tamanho)
 
         
@@ -184,6 +185,8 @@ if __name__ == "__main__":
         
         imagem_criptografada = Image.open(arquivo)
 
+        imagem_criptografada = imagem_criptografada.convert("RGB")
+        imagem_original = imagem_original.convert("RGB")
         extraindo_mensagem(imagem_original, imagem_criptografada)
     else:
         print("Decisao invalida!")
