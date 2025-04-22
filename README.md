@@ -49,3 +49,9 @@ pip install Pillow
 │  ├── 📂 imagem_saida           # Pasta que vai possuir o PNG de saída, com a mensagem escondida
 │  └── 📂 imagem_com_mensagem    # Pasta que possui a imagem pronta para revelar o conteúdo oculto
 📄 main.py                       # Script principal que lê e grava as imagens
+```
+## Aviso Legal
+
+Este projeto foi desenvolvido com fins educacionais e demonstrativos, sem qualquer intenção de promover uso malicioso da técnica de esteganografia. O autor não se responsabiliza por usos indevidos deste código para fins ilegais ou mal-intencionados.
+
+Use com ética e responsabilidade.
